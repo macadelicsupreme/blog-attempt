@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: My Third Blog Post
 author: T Macc
 description: "This post will show up on its own!"

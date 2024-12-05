@@ -84,4 +84,13 @@ h1 {
     .hamburger {
         display: none;
     }
+
+    html.dark {
+        background-color: #0d0950;
+        color: #fff;
+    }
+
+    .dark .nav-links a {
+        color: #fff;
+    }
 }
