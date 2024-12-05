@@ -1,3 +1,20 @@
 ---
+import Social from "./Social.astro";
+
+// const platform = "github";
+// const username = "macadelicsupreme"
 
 ---
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
+
+<footer>
+    <Social platform="x" username="none" />
+    <Social platform="linkedin" username="none" />
+    <Social platform="github" username="macadelicsupreme" />
+</footer>

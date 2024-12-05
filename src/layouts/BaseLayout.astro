@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+const { pageTitle } = Astro.props;
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
+
+const identity = {
+    name: "T",
+    country: "U.S.",
+    hobbies: ["coding", "reading", "cooking", "binge watching cool shows"]
+}
+
+const skills = ["HTML", "CSS", "Java", "Apache Kafka", "Note-Taking"]
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Tutorialx3</title>
+</head>
+
+<body>
+<style is:global define:vars={{skillColor, fontWeight, textCase}}>
+    h1 {
+        color: blue;
+        font-size: 3rem;
+    }
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase)
+    }
+</style>
+<Header />
+<h1>{pageTitle}</h1>
+
+<slot />
+<Footer />
+<script>
+    import "../scripts/menu.js";
+</script>
+</body>
+
+</html>

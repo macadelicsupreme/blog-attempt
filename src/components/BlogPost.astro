@@ -1,14 +1,7 @@
 ---
-const {blog, username, date} = Astro.props;
+const {title, url} = Astro.props;
+
 ---
 
-<h2>{`Url or how...${blog} do i add the username ${username} and date`}</h2>
+<li><a href={url}>{title}</a></li>
 
-<style>
-    a {
-        padding: 0.5rem 1rem;
-        color: white;
-        background-color: #1d6995;
-        text-decoration: none;
-    }
-</style>

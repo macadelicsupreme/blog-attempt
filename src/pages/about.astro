@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "About Me";
+
+
+const identity = {
+    name: "T",
+    country: "U.S.",
+    hobbies: ["coding", "reading", "cooking", "binge watching cool shows"]
+}
+const skills = ["HTML", "CSS", "Java", "Apache Kafka", "Note-Taking"]
+
+---
+<BaseLayout pageTitle={pageTitle}>
+    <h1>This will represent the about me page</h1>
+
+    <p>Suggest anything to me and I am down to explore it. This will represent my various adventures in life and learning.</p>
+    <ul>
+        <li>I am {identity.name}</li>
+        <li>I enjoy a multitude of different activities but I will only name a few which includes {identity.hobbies[0]}, {identity.hobbies[1]} and
+            {identity.hobbies[2]} to name a few.</li>
+    </ul>
+
+    <p>My skills are:</p>
+    <ul>
+        {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+</BaseLayout>
